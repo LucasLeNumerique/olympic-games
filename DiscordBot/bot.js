@@ -44,12 +44,12 @@ clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
                 message.channel.send(element.country + ': Position -> ' + element.position);
               }
             } else {
-              console.log('No results')
+              message.channel.send('No results about this sport are available');
             }
           })
 
         } else {
-          console.log("This sport doesn't exist!")
+          message.channel.send('This sport is not even being played in this Olympic Games edition!');
         }
 
       })
