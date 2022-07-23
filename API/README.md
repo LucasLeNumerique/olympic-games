@@ -9,7 +9,7 @@ Regardez la [vidéo](https://www.loom.com/share/b487ff8df1e64cdeb01c0f2929822d23
 
 • Avoir un IDE installé (ex : [Visual Studio Code](https://code.visualstudio.com)).
 
-• Avoir un serveur local (ex : j'utilise Laragon. [Xampp](https://www.apachefriends.org/fr/index.html) est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
+• Avoir un serveur local MySQL (ex : j'utilise Laragon. [Xampp](https://www.apachefriends.org/fr/index.html) est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
 
 • Avoir [Postman](https://www.postman.com)
 
@@ -19,9 +19,9 @@ Regardez la [vidéo](https://www.loom.com/share/b487ff8df1e64cdeb01c0f2929822d23
 
 • Ensuite, `php artisan serve` pour lancer le serveur
 
-• Dans votre serveur local, créer une base de données "laravel_api" sans ajouter de table.
+• Lancer votre serveur local, puis créer une base de données "laravel_api" sans ajouter de table.
 
-• Dans le dossier *API* du projet, se rendre dans le fichier *.env* et rensigner la DB_DATABASE ("laravel_api"), le DB_USERNAME et DB_PASSWORD qui sont le pseudonyme et le mot de passe pour cette base de données (dépent de l'utilisateur).
+• Dans le dossier *API* du projet, se rendre dans le fichier *.env* et rensigner la DB_DATABASE ("laravel_api"), le DB_USERNAME et DB_PASSWORD qui sont le pseudonyme et le mot de passe pour cette base de données (dépent de la configuration de votre application de serveur local).
 
 • Revenir sur votre terminal, et entrer `php artisan migrate` pour créer les tables à l'intérieur de *laravel_api*
 
