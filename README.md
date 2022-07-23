@@ -9,4 +9,5 @@ Une vidéo LOOM sera présente à l'intérieur de chaque dossier de ce repositor
 
 • Ouvrir un terminal de commande qui tolère les commandes git (installation de Gitbash recommandée).
 • Effectuer la commande :
-> git clone https://github.com/LucasLeNumerique/olympic-games.git
+
+`git clone https://github.com/LucasLeNumerique/olympic-games.git`
