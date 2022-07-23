@@ -17,25 +17,25 @@ Regardez la [vidéo](https://www.loom.com/share/b487ff8df1e64cdeb01c0f2929822d23
 
 • Effectuer la commande `cd api` sur votre terminal.
 
-• Ensuite, `php artisan serve` pour lancer le serveur
-
 • Lancer votre serveur local, puis créer une base de données "laravel_api" sans ajouter de table.
 
 • Dans le dossier *API* du projet, dupliquer le fichier *.env.example* et renommer le doublon en *.env*. À l'intérieur de ce fichier, renseigner la DB_DATABASE ("laravel_api"), le DB_USERNAME et DB_PASSWORD qui sont le pseudonyme et le mot de passe pour cette base de données (dépent de la configuration de votre application de serveur local).
 
-• Revenir sur votre terminal, et entrer `php artisan migrate` pour créer les tables à l'intérieur de *laravel_api*
+• Après les informations de la base de données informées, effectuer `php artisan serve` pour lancer le serveur Laravel.
+
+• Revenir sur votre terminal, et entrer `php artisan migrate` pour créer les tables à l'intérieur de *laravel_api*.
 
 ### Envoyer des données JO à la base de données (cf vidéo LOOM)
 
 #### Sport
 
-• Aller sur Postman et créer une route de type **POST**
+• Aller sur Postman et créer une route de type **POST**.
 
 • Coller le lien http://127.0.0.1:8000/api/sports sur le champ de requête.
 
 • Cliquer sur *Params*. Dans *KEY*, renseigner "name" puis dans *VALUE*, renseigner un sport olympique de votre choix !
 
-• Cliquer sur *SEND*
+• Cliquer sur *SEND*.
 
 #### Résultats
 
@@ -53,6 +53,6 @@ country = France
 position = 1
 ```
 
-• Cliquer sur *SEND*
+• Cliquer sur *SEND*.
 
-• Vérifier la soumission de données dans la base de données locale
+• Vérifier la soumission de données dans la base de données locale.
