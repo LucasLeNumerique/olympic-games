@@ -1,6 +1,6 @@
 # API (Laravel)
 
-Dans cette partie de projet, vous saurez comment soumettre les sports et les résultats correspondants à la base de donnée
+Dans cette partie de projet, vous saurez comment soumettre les sports et les résultats correspondants à la base de donnée.
 
 ## Prérequis
 
@@ -24,7 +24,7 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 
 • Revenir sur votre terminal, et entrer `php artisan migrate` pour créer les tables à l'intérieur de *laravel_api*
 
-### Envoyer des données JO à la base de données
+### Envoyer des données JO à la base de données (cf vidéo LOOM)
 
 #### Sport
 
@@ -32,5 +32,23 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 
 • Coller le lien http://127.0.0.1:8000/api/sports sur le champ de requête.
 
-• Cliquer sur *Params*
+• Cliquer sur *Params*. Dans *KEY*, renseigner "name" puis dans *VALUE*, renseigner un sport olympique de votre choix !
+
+• Cliquer sur *SEND*
+
+#### Résultats
+
+• Créer une route de type **POST**
+
+• Coller le lien http://127.0.0.1:8000/api/results sur le champ de requête.
+
+• Cliquer sur *Params*, et renseigner les champs. _Le sports_id doit avoir la même valeur que l'id du name dans la table sport_. Voici un exemple :
+
+```
+sports_id = 1
+country = France
+position = 1 (1 signifie 1ère position)
+```
+
+• Cliquer sur *SEND*
 
