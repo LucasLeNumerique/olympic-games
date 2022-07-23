@@ -43,12 +43,14 @@ Regardez la [vidéo](https://www.loom.com/share/b487ff8df1e64cdeb01c0f2929822d23
 
 • Coller le lien http://127.0.0.1:8000/api/results sur le champ de requête.
 
-• Cliquer sur *Params*, et renseigner les champs *KEY* et *VALUE*. _Attention, le sports_id a un lien avec l'id du name dans la table sports_ (Dans la table *sport*, si l'id du football et 1 - et que vous souhaitez soumettre par rapport au football - alors le sports_id dans la table *results* sera également 1. Voici un exemple :
+• Cliquer sur *Params*, et renseigner les champs *KEY* et *VALUE*. 
+
+>Attention, le sports_id a un lien avec l'id du name dans la table sports (Dans la table *sport*, si l'id du football et 1 - et que vous souhaitez soumettre par rapport au football - alors le sports_id dans la table *results* sera également 1. Voici un exemple :
 
 ```
-sports_id = 1 (
+sports_id = 1
 country = France
-position = 1 (1 signifie 1ère position)
+position = 1
 ```
 
 • Cliquer sur *SEND*
