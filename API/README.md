@@ -28,5 +28,9 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 
 #### Sport
 
-• 
+• Aller sur Postman et créer une route de type **POST**
+
+• Coller le lien http://127.0.0.1:8000/api/sports sur le champ de requête.
+
+• Cliquer sur *Params*
 
