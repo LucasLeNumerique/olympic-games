@@ -9,3 +9,7 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 • Avoir un IDE (ex : Visual Studio Code).
 
 • Avoir un serveur local (ex : j'utilise Laragon. Xampp est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
+
+### Instructions
+
+
