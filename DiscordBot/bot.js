@@ -15,19 +15,43 @@ clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
       // Ne pas tenir compte des messages envoyés par les bots, ou qui ne commencent pas par le préfix
       if (message.author.bot || !message.content.startsWith(COMMAND_PREFIX)) return;
 
-      // On découpe le message pour récupérer tous les mots
+      // Découper le message pour récupérer tous les mots
       const words = message.content.split(' ');
 
       const commandName = words.shift().slice(1); // Le premier mot du message, auquel on retire le préfix
       const arguments = words; // Tous les mots suivants sauf le premier
 
-      if (client.commands.has(commandName)) {
-        // La commande existe, on la lance
-        client.commands.get(commandName).run(client, message, arguments);
-      } else {
-        // La commande n'existe pas, on prévient l'utilisateur
-        await message.delete();
-        await message.channel.send(`The ${commandName} does not exist.`);
-      }
+      // ---------------------------------------------- CI-DESSUS LE CODE DU TEMPLATE FOURNI PENDANT LE COURS DE DISCORD JS --------------------------------------- //
+
+      // Sélectionner le sport de la base de données équivalent à la commande sur Discord
+      var sql = "SELECT * FROM `sports` WHERE name = '" + commandName + "'"
+      MysqlConnector.executeQuery(sql)
+      .then((response) => {
+        
+        // Si la sélection du sport de la base de données s'est bien faite...
+        if (response[0]) {
+          // Sélectionner les données du premier pays (enregistré le premier dans la base de données)
+          var sql2 = "SELECT * FROM `results` WHERE sports_id = " + response[0].id
+          MysqlConnector.executeQuery(sql2)    
+          .then((response2) => {
+            // Si au moins un pays, concernant le sport choisi, est présent dans la base...
+
+            if (response2[0]) {
+              // Faire une boucle pour afficher chaque jeu de données
+              for (let i = 0 ; i < response2.length; i++) {
+                const element = response2[i];
+                // Envoyer un message (par le Bot) sur Discord avec le pays et sa position sur le sport demandé
+                message.channel.send(element.country + ': Position -> ' + element.position);
+              }
+            } else {
+              console.log('No results')
+            }
+          })
+
+        } else {
+          console.log("This sport doesn't exist!")
+        }
+
+      })
     })
   });

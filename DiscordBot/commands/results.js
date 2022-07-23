@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const mysql = require('mysql');
 
 /**
  * @param {Discord.Client} client
@@ -6,7 +7,8 @@ const Discord = require('discord.js');
  * @param {Array<String>} arguments
  */
 module.exports.run = async (client, message, arguments) => {
-
+    message.channel.send('Here are the results!');
 };
 
-module.exports.name = '';
+
+module.exports.name = 'results';
