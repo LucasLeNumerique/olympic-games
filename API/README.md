@@ -1,6 +1,7 @@
 # API (Laravel)
 
 Dans cette partie de projet, vous saurez comment soumettre les sports et les résultats correspondants à la base de donnée.
+Regardez la [vidéo](https://www.loom.com/share/b487ff8df1e64cdeb01c0f2929822d23) pour une démonstration ainsi que l'explication du code.
 
 ## Prérequis
 
@@ -42,7 +43,7 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 
 • Coller le lien http://127.0.0.1:8000/api/results sur le champ de requête.
 
-• Cliquer sur *Params*, et renseigner les champs. _Le sports_id doit avoir la même valeur que l'id du name dans la table sport_. Voici un exemple :
+• Cliquer sur *Params*, et renseigner les champs *KEY* et *VALUE*. _Le sports_id doit avoir la même valeur que l'id du name dans la table sport_. Voici un exemple :
 
 ```
 sports_id = 1
@@ -52,3 +53,4 @@ position = 1 (1 signifie 1ère position)
 
 • Cliquer sur *SEND*
 
+• Vérifier la soumission de données dans la base de données locale
