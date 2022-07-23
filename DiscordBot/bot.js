@@ -1,5 +1,5 @@
 const clientLoader = require('./src/clientLoader');
-const commandLoader = require('./src/commandLoader');
+// const commandLoader = require('./src/commandLoader');
 const MysqlConnector = require('./src/MySqlConnector');
 
 require('colors');
@@ -9,7 +9,7 @@ MysqlConnector.connect();
 
 clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
   .then(async (client) => {
-    await commandLoader.load(client);
+    // await commandLoader.load(client);
 
     client.on('messageCreate', async (message) => {
       // Ne pas tenir compte des messages envoyés par les bots, ou qui ne commencent pas par le préfix
@@ -28,16 +28,16 @@ clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
       MysqlConnector.executeQuery(sql)
       .then((response) => {
         
-        // Si la sélection du sport de la base de données s'est bien faite...
         if (response[0]) {
+          // Si la sélection du sport de la base de données s'est bien faite...
           // Sélectionner les données du premier pays (enregistré le premier dans la base de données)
           var sql2 = "SELECT * FROM `results` WHERE sports_id = " + response[0].id
           MysqlConnector.executeQuery(sql2)    
           .then((response2) => {
-            // Si au moins un pays, concernant le sport choisi, est présent dans la base...
 
             if (response2[0]) {
-              // Faire une boucle pour afficher chaque jeu de données
+              // Si au moins un pays, concernant le sport choisi, est présent dans la base...
+              // Faire une boucle pour afficher chaque pays et sa position
               for (let i = 0 ; i < response2.length; i++) {
                 const element = response2[i];
                 // Envoyer un message (par le Bot) sur Discord avec le pays et sa position sur le sport demandé
