@@ -8,7 +8,7 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 
 • Avoir un IDE installé (ex : [Visual Studio Code](https://code.visualstudio.com)).
 
-• Avoir un serveur local (ex : j'utilise Laragon. Xampp est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
+• Avoir un serveur local (ex : j'utilise Laragon. [Xampp](https://www.apachefriends.org/fr/index.html) est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
 
 • Avoir [Postman](https://www.postman.com)
 
@@ -23,4 +23,10 @@ Dans cette partie de projet, vous saurez comment soumettre les sports et les ré
 • Dans le dossier *API* du projet, se rendre dans le fichier *.env* et rensigner la DB_DATABASE ("laravel_api"), le DB_USERNAME et DB_PASSWORD qui sont le pseudonyme et le mot de passe pour cette base de données (dépent de l'utilisateur).
 
 • Revenir sur votre terminal, et entrer `php artisan migrate` pour créer les tables à l'intérieur de *laravel_api*
+
+### Envoyer des données JO à la base de données
+
+#### Sport
+
+• 
 
