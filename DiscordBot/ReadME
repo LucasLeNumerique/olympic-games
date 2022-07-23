@@ -1,1 +1,14 @@
+# Discord Bot (Node JS)
 
+Dans cette partie de projet, vous saurez comment manipuler un Bot sur Discord pour qu'il puisse vous informer des résultats des JO par message instantané.
+Regardez la [vidéo](https://www.loom.com/share/d058df26afcc4eab96517219e8d25c91) pour une démonstration ainsi que l'explication du code.
+
+## Prérequis
+
+• Avoir Node installé dans votre machine (version 14 minimum). Vous pouvez accéder [site](https://nodejs.org/en/).
+
+• Avoir un IDE installé (ex : [Visual Studio Code](https://code.visualstudio.com)).
+
+• Avoir un serveur local (ex : j'utilise Laragon. [Xampp](https://www.apachefriends.org/fr/index.html) est une solution non risquée puisqu'elle inclut Mac, Windows et Linux).
+
+• Avoir créé un serveur sur Discord  
