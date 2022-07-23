@@ -26,6 +26,32 @@ clientLoader.createClient(['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'])
       // Sélectionner le sport de la base de données équivalent à la commande sur Discord
       var sql = "SELECT * FROM `sports` WHERE name = '" + commandName + "'"
       MysqlConnector.executeQuery(sql)
-      
+      .then((response) => {
+        
+        // Si la sélection du sport de la base de données s'est bien faite...
+        if (response[0]) {
+          // Sélectionner les données du premier pays (enregistré le premier dans la base de données)
+          var sql2 = "SELECT * FROM `results` WHERE sports_id = " + response[0].id
+          MysqlConnector.executeQuery(sql2)    
+          .then((response2) => {
+            // Si au moins un pays, concernant le sport choisi, est présent dans la base...
+
+            if (response2[0]) {
+              // Faire une boucle pour afficher chaque jeu de données
+              for (let i = 0 ; i < response2.length; i++) {
+                const element = response2[i];
+                // Envoyer un message (par le Bot) sur Discord avec le pays et sa position sur le sport demandé
+                message.channel.send(element.country + ': Position -> ' + element.position);
+              }
+            } else {
+              console.log('No results')
+            }
+          })
+
+        } else {
+          console.log("This sport doesn't exist!")
+        }
+
+      })
     })
   });
